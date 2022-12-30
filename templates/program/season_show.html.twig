@@ -12,7 +12,8 @@
 			<p>{{ program.synopsis }}</p>
 			<p>Catégorie :
 				{{ program.category.name }}</p>
-			<h2>{{ season.number }}
+			<h2>saison
+				{{ season.number }}
 				-
 				{{ season.year }}</h2>
 			<p>Liste des épisodes :</p>
@@ -21,7 +22,8 @@
 					<li>Episode
 						{{ episod.number}}
 						-
-						{{ episod.title }}</li>
+						<a href="{{ path("program_episode_show", {program: program.id, season: season.id, episode: episod.id})}}">plus de détails ici</a>
+					</li>
 				{% endfor %}
 			</p>
 
