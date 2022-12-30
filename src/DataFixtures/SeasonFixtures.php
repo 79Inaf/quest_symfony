@@ -30,61 +30,6 @@ class SeasonFixtures extends Fixture implements DependentFixtureInterface
             }
         }
 
-        // for ($i = 0; $i < 5; $i++) {
-        //     $season = new Season();
-        //     $season->setNumber($faker->numberBetween(1, 5));
-        //     $season->setYear($faker->year());
-        //     $season->setDescription($faker->paragraphs(2, true));
-
-        //     $season->setProgram($this->getReference('program_1'));
-
-        //     $manager->persist($season);
-        // }
-
-        // for ($i = 0; $i < 5; $i++) {
-        //     $season = new Season();
-        //     $season->setNumber($faker->numberBetween(1, 5));
-        //     $season->setYear($faker->year());
-        //     $season->setDescription($faker->paragraphs(2, true));
-
-        //     $season->setProgram($this->getReference('program_2'));
-
-        //     $manager->persist($season);
-        // }
-
-        // for ($i = 0; $i < 5; $i++) {
-        //     $season = new Season();
-        //     $season->setNumber($faker->numberBetween(1, 5));
-        //     $season->setYear($faker->year());
-        //     $season->setDescription($faker->paragraphs(2, true));
-
-        //     $season->setProgram($this->getReference('program_3'));
-
-        //     $manager->persist($season);
-        // }
-
-        // for ($i = 0; $i < 5; $i++) {
-        //     $season = new Season();
-        //     $season->setNumber($faker->numberBetween(1, 5));
-        //     $season->setYear($faker->year());
-        //     $season->setDescription($faker->paragraphs(2, true));
-
-        //     $season->setProgram($this->getReference('program_4'));
-
-        //     $manager->persist($season);
-        // }
-
-        // for ($i = 0; $i < 5; $i++) {
-        //     $season = new Season();
-        //     $season->setNumber($faker->numberBetween(1, 5));
-        //     $season->setYear($faker->year());
-        //     $season->setDescription($faker->paragraphs(2, true));
-
-        //     $season->setProgram($this->getReference('program_5'));
-
-        //     $manager->persist($season);
-        // }
-
         $manager->flush();
     }
 
