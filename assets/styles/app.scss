@@ -1,8 +1,13 @@
 $secondary: #dd80f4;
-$primary: #f53015;
+$primary: #086532;
+$success: #f3cdf9;
 
 @import "~bootstrap/scss/bootstrap";
 
 // body {
 //     background-color: rgba(92, 103, 75, 0.781);
 // }
+
+.card {
+    width: 25rem;
+}

@@ -6,21 +6,33 @@
 
 {% block body %}
 
-	<h1 class="text-primary">Toutes les séries de la table program :</h1>
-	{% for program in programs %}
-		<div>
-			<h2>{{ loop.index }}
-				/
-				{{ program.title }}
-				- catégorie :
-				{{ program.category.name }}</h2>
-			<img src="{{ program.poster }}" alt="{{ program.poster }}"/>
-			<p>{{ program.synopsis }}</p>
-			<a href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>
+	<h1 class="text-center text-primary">Toutes les séries de la table program :</h1>
+	<div class="container-fluid">
+		<div class="row">
+			{% for program in programs %}
+				<div class="d-flex justify-content-center mb-4 p-2 col-md-6 col-xxl-4">
+					<div class="d-flex p-2 card bg-success">
+						<h5 class="card_header text-success">
+							{{ loop.index }}
+							/
+							{{ program.title }}
+						</h5>
+						<img class="card-img-top" src="{{ program.poster }}" alt="{{ program.poster }}"/>
+						<div class="card-body">
+							<h6 class="card-title">
+								catégorie :
+								{{ program.category.name }}</h6>
+
+							<p class="card-text">{{ program.synopsis }}</p>
+							<a class="btn-primary" href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>
+						</div>
+					</div>
+				</div>
+			{% else %}
+				Aucune série trouvée.
+			{% endfor %}
 		</div>
-	{% else %}
-		Aucune série trouvée.
-	{% endfor %}
+	</div>
 
 	<a href="{{ path('app_index') }}">
 		Retour à l'accueil
