@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Show serie
+{% endblock %}
+
+
+{% block body %}
+	{{ form_start(form) }}
+	<div class="row">
+		<div class="col-6">
+			{{ form_widget(form) }}
+		</div>
+	</div>
+	<button class="btn btn-primary mb-3" type="submit">Ajouter la série</button>
+	{{ form_end(form) }}
+
+	<a href="{{ path('program_index') }}">Retour à la liste des séries</a>
+</div>{% endblock %}
