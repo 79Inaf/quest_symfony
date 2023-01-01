@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	<div class="example-wrapper">
+	<div>
 		<h1 class="text-primary">Liste des catégories</h1>
 		<ul>
 			{% for category in categories %}
@@ -13,5 +13,6 @@
 				</a>
 			{% endfor %}
 		</ul>
+		<a class="text-info" href="{{path('category_new')}}">Ajouter une catégorie</a>
 	</div>
 {% endblock %}
